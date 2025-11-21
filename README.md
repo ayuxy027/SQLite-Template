@@ -1,6 +1,10 @@
 React + Vite + SQLite Template
 ===============
 
+This is a small, **Hackathon‑ready Starter** I mostly use as my **Go‑to Template** when I need to spin up a
+Full‑stack app quickly. Nothing fancy, just a clean React frontend and a simple SQLite‑backed API that
+work nicely together.
+
 **Stack**
 
 - **Frontend**: React 19 + TypeScript + Vite + Tailwind
@@ -24,8 +28,7 @@ Then open `http://localhost:5173` – the home page counter is fully backed by S
 
 Start editing UI in `frontend/src/App.tsx` and backend logic in `backend/routes/` / `backend/db/sqlite.js`.
 
-**Docs**
+**Pro Tip**
 
-- High-level docs live in this `README.md`.
 - For a growing project, create a `docs/` directory (e.g. `docs/architecture.md`, `docs/api.md`) and link to those files from here.
 - Keep this README as the quick “how to run + where to edit” entry point, and push deeper explanations into `docs/`.
