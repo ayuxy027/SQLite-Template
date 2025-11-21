@@ -1,4 +1,4 @@
-SQLite Template
+React + Vite + SQLite Template
 ===============
 
 **Stack**

@@ -19,6 +19,3 @@ app.use('/api', healthRoutes)
 app.use('/api', counterRoutes)
 
 module.exports = app
-
-
-

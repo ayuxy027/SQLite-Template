@@ -1,0 +1,41 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js dependencies and related files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# logs
+logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VSCode settings (optional, but common)
+.vscode/
+
+# Miscellaneous
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Vercel
+.vercel
+.dist
+
+# SQLite database
+backend/*.sqlite

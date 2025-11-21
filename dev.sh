@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
+simply run ./
+
 set -e
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$ROOT_DIR"
 
-echo "==> Starting SQLite Template dev environment"
+echo "==> Starting Dev environment"
 
 if [ ! -d "$ROOT_DIR/frontend/node_modules" ]; then
   echo "==> Installing frontend dependencies..."
@@ -23,7 +25,7 @@ if [ -d "$ROOT_DIR/backend" ] && [ -f "$ROOT_DIR/backend/package.json" ]; then
     cd "$ROOT_DIR"
   fi
 
-  echo "==> Starting backend (port 4000 by default)..."
+  echo "==> Starting backend - port 4000 by default..."
   cd "$ROOT_DIR/backend"
   npm run dev &
   BACKEND_PID=$!

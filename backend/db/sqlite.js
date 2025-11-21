@@ -14,19 +14,23 @@ db.prepare(
 `,
 ).run()
 
+const getStmt = db.prepare('SELECT value FROM counter WHERE id = 1')
+const insertStmt = db.prepare('INSERT INTO counter (id, value) VALUES (1, ?)')
+const updateStmt = db.prepare('UPDATE counter SET value = ? WHERE id = 1')
+
 // Seed with 0 if empty
-const row = db.prepare('SELECT value FROM counter WHERE id = 1').get()
+const row = getStmt.get()
 if (!row) {
-  db.prepare('INSERT INTO counter (id, value) VALUES (1, 0)').run()
+  insertStmt.run(0)
 }
 
 function getCounterValue() {
-  const item = db.prepare('SELECT value FROM counter WHERE id = 1').get()
+  const item = getStmt.get()
   return item?.value ?? 0
 }
 
 function setCounterValue(nextValue) {
-  db.prepare('UPDATE counter SET value = ? WHERE id = 1').run(nextValue)
+  updateStmt.run(nextValue)
   return getCounterValue()
 }
 
