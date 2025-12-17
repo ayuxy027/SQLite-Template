@@ -36,6 +36,3 @@ $RECYCLE.BIN/
 # Vercel
 .vercel
 .dist
-
-# SQLite database
-backend/*.sqlite

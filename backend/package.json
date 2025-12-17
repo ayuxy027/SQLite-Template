@@ -1,21 +1,21 @@
 {
-  "name": "sqlite-template-backend",
-  "version": "0.0.1",
-  "private": true,
-  "main": "server.js",
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "node --watch src/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
-    "better-sqlite3": "^11.8.1",
+    "@prisma/client": "^5.19.1",
+    "express": "^4.21.1",
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "prisma": "^5.19.1"
   }
 }
-
-
 

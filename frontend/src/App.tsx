@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/Home'
 import HealthPage from './pages/Health'
 import DocsPage from './pages/Docs'
+import Stats from './components/Stats'
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
-            <span className="text-base font-semibold tracking-tight text-stone-900">SQLite Template</span>
+            <span className="text-base font-semibold tracking-tight text-stone-900">PostgreSQL Template</span>
           </div>
           <nav className="flex gap-8 text-sm md:text-base font-medium text-stone-500">
             <NavLink
@@ -42,6 +43,14 @@ const App = () => {
             >
               Docs
             </NavLink>
+            <NavLink
+              to="/stats"
+              className={({ isActive }) =>
+                `transition-colors ${isActive ? 'text-stone-900' : 'hover:text-stone-900'}`
+              }
+            >
+              Stats
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -51,6 +60,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/health" element={<HealthPage />} />
           <Route path="/docs" element={<DocsPage />} />
+          <Route path="/stats" element={<Stats />} />
         </Routes>
       </main>
     </div>
